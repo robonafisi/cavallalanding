@@ -33,8 +33,10 @@ const Faq = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center p-5">
-      <h1 className="text-4xl font-bold mb-6 text-black text-center font-playfair">Frequently Asked Questions</h1>
+    <div className="w-screen h-screen flex flex-col items-center justify-center">
+      <div className='py-10'>
+      <h1 className="text-4xl font-bold text-black text-center font-playfair">Frequently Asked Questions</h1>
+      </div>
       <div className="w-4/5 max-w-4xl flex flex-col gap-4">
         {faqData.map((item, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-5 cursor-pointer w-full">
@@ -51,7 +53,7 @@ const Faq = () => {
         ))}
       </div>
       
-      <div className="mt-6">
+      <div className="py-6">
         <a href="https://calendly.com/cavalla/meeting" target="_blank" rel="noopener noreferrer">
           <Button className="bg-teal-800 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg text-lg font-bold transition">
             Contact Sales

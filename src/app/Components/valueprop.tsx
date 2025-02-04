@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const WhyChoose = () => {
+const ValueProp = () => {
   return (
     <div className="min-h-screen bg-amber-50 py-16 flex flex-col justify-center">
       {/* Benefits Section */}
@@ -120,4 +120,4 @@ const WhyChoose = () => {
   );
 };
 
-export default WhyChoose;
+export default ValueProp;

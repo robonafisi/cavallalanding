@@ -13,7 +13,7 @@ const AboutUs = () => {
         <p className="text-black text-lg font-sourcesans leading-relaxed max-w-lg mx-auto lg:mx-0">
          We live and breathe forklifts. Our team has background in industrial equipment, robot deployments, and material handling software. We started with humble begining and have been dedicated to working closely with each customer to bring them highest ROI possible.
         </p>
-         <div className="mt-6">
+         <div className="py-6">
         <a href="https://calendly.com/cavalla/meeting" target="_blank" rel="noopener noreferrer">
           <Button className="bg-teal-800 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg text-lg font-bold transition">
             Contact Sales
@@ -24,7 +24,7 @@ const AboutUs = () => {
       
 
       {/* Right column with image */}
-      <div className="flex justify-center items-center px-8">
+      <div className="flex justify-center items-center px-8 py-3">
         <Image
           src="/images/TeamPicture1.png" 
           alt="Cavalla team working on autonomous forklifts"

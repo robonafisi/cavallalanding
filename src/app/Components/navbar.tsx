@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react"; // Icons for menu open/close
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +26,7 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.5 } // Adjust this value for better responsiveness
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -40,9 +42,11 @@ const Navbar = () => {
         ${isScrolled ? "bg-navsecond text-black shadow-lg" : "bg-transparent text-black shadow-md"}`}
     >
       <div className="flex items-center justify-between">
+        {/* Logo */}
         <span className="text-3xl font-semibold font-playfair">Cavalla</span>
 
-        <div className="flex items-center justify-center space-x-4 flex-grow font-playfair">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6 font-playfair">
           {["landing", "whychoose", "faq", "aboutus"].map((id) => (
             <a
               key={id}
@@ -55,7 +59,31 @@ const Navbar = () => {
             </a>
           ))}
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-black"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="absolute left-0 top-full w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden">
+          {["landing", "whychoose", "faq", "aboutus"].map((id) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className="text-lg font-semibold text-black"
+              onClick={() => setIsMenuOpen(false)} // Close menu on selection
+            >
+              {id.charAt(0).toUpperCase() + id.slice(1)}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

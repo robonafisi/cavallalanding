@@ -1,7 +1,7 @@
 'use client';
 import Navbar from './Components/navbar';
 import Landing from './Components/landing';
-import WhyChoose from './Components/whychoose';
+import WhyChoose from './Components/valueprop';
 import Faq from './Components/faq';
 import AboutUs from './Components/aboutus';
 import Footer from './Components/footer';
