@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button'; 
+import { Button } from '@/components/ui/button';
 
 const faqData = [
   {
@@ -9,7 +9,7 @@ const faqData = [
   },
   {
     question: "What states and areas are you live in?",
-    answer: "We are currently focused on California. We expect to expand into 3 other states by the end of this year. We are open to priotitizing new states depending on the customer interest. Get in touch if you think your warehouse can benefit from our solution."
+    answer: "We are currently focused on California. We expect to expand into 3 other states by the end of this year. We are open to prioritizing new states depending on the customer interest. Get in touch if you think your warehouse can benefit from our solution."
   },
   {
     question: "What kind of warehouses can benefit from Cavalla?",
@@ -17,11 +17,11 @@ const faqData = [
   },
   {
     question: "What is your installation process like?",
-    answer: "Our installation process is designed to be flexible and seamless. We can integrate with your existing forklifts, equipping them with our autonomous technology to minimize disruptions and costs. Alternatively, we offer a forklift swap, providing new autonomous forklifts tailored to your warehouse needs. Durnig the installation process we will have a team of remote operators that will be monitoring the system. We will be able to remotely fix any issues that arise and fit right into your existing workflows."
+    answer: "Our installation process is designed to be flexible and seamless. We can integrate with your existing forklifts, equipping them with our autonomous technology to minimize disruptions and costs. Alternatively, we offer a forklift swap, providing new autonomous forklifts tailored to your warehouse needs. During the installation process, we will have a team of remote operators that will be monitoring the system. We will be able to remotely fix any issues that arise and fit right into your existing workflows."
   },
   {
     question: "Is Cavalla safe to use in our warehouse?",
-    answer: "The short answer is yes. The long answer is that we have multiple layers of safety systems. Each layer has a great chance of preventing an accident. All together they make it almost impossible to have an accident. We are insured by top robotics insurer and pride ourselves in not having a single accident so far in our journey."
+    answer: "The short answer is yes. The long answer is that we have multiple layers of safety systems. Each layer has a great chance of preventing an accident. Altogether, they make it almost impossible to have an accident. We are insured by top robotics insurers and pride ourselves on not having a single accident so far in our journey."
   },
 ];
 
@@ -33,11 +33,10 @@ const Faq = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center">
-      <div className='py-10'>
-      <h1 className="text-4xl font-bold text-black text-center font-playfair">Frequently Asked Questions</h1>
-      </div>
-      <div className="w-4/5 max-w-4xl flex flex-col gap-4">
+    <div className="w-full py-10 flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-black text-center font-playfair mb-6">Frequently Asked Questions</h1>
+      
+      <div className="w-11/12 md:w-4/5 max-w-4xl flex flex-col gap-4">
         {faqData.map((item, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-5 cursor-pointer w-full">
             <div className="flex justify-between items-center" onClick={() => toggleAnswer(index)}>
@@ -65,4 +64,3 @@ const Faq = () => {
 };
 
 export default Faq;
-
