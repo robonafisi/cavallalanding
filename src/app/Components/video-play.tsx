@@ -36,7 +36,6 @@ export const Video: React.FC<VideoProps> = ({
       muted
       loop
       autoPlay
-      controls // Added controls for testing
     >
       <source src={videoSrc} type="video/mp4" />
       {captionSrc && (
