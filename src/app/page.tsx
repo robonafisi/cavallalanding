@@ -1,7 +1,7 @@
 'use client';
 import Navbar from './Components/navbar';
 import Landing from './Components/landing';
-import WhyChoose from './Components/valueprop';
+import ValueProp from './Components/valueprop';
 import Faq from './Components/faq';
 import AboutUs from './Components/aboutus';
 import Footer from './Components/footer';
@@ -16,7 +16,7 @@ export default function Home() {
       </section>
 
       <section id="whychoose">
-        <WhyChoose />
+        <ValueProp />
       </section>
 
       <section id="faq">

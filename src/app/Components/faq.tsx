@@ -54,7 +54,7 @@ const Faq = () => {
       
       <div className="py-6">
         <a href="https://calendly.com/cavalla/meeting" target="_blank" rel="noopener noreferrer">
-          <Button className="bg-teal-800 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg text-lg font-bold transition">
+          <Button className="bg-teal-800 hover:bg-emerald-700 text-white px-6 py-6 rounded-md text-lg font-bold transition">
             Contact Sales
           </Button>
         </a>
