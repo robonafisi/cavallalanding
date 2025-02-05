@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // Icons for menu open/close
 
 const Navbar = () => {
-  // const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,14 +13,6 @@ const Navbar = () => {
     aboutus: "About Us",
   };
 
-  // useEffect(() => {
-    // const handleScroll = () => {
-    //   setIsScrolled(window.scrollY > 50);
-    // };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -46,11 +37,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={'fixed top-0 left-0 right-0 w-full px-6 py-3 z-50 transition-all duration-300'}
+      className={"fixed top-0 left-0 right-0 w-full px-6 py-3 z-50 bg-[#D8C3A5] shadow-md"}
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <span className="text-3xl font-semibold font-playfair">Cavalla</span>
+        <span className="text-3xl font-semibold">Cavalla</span>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 font-playfair">

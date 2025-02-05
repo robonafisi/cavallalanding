@@ -9,9 +9,10 @@ const Landing = () => {
       <div className="flex flex-col justify-center space-y-6 px-4 md:px-8 text-center md:text-left w-full md:w-1/2">
       <div className='py-3'>
         <div className='py-3'>
-        <h1 className="text-3xl md:text-5xl font-bold text-black md:py-5 sm:py-3">
-          Autonomy With ROI From Day 1
+        <h1 className="text-7xl md:text-7xl font-bold text-black md:py-5 sm:py-3 leading-[1.3]">
+           Autonomy With ROI From Day 1
         </h1>
+
         </div>
         <p className="text-black text-lg md:text-xl leading-relaxed max-w-lg mx-auto md:mx-0">
           We bring concierge forklift autonomy that does not require CapEx investment or complicated installation. 

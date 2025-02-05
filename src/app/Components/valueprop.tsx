@@ -16,7 +16,7 @@ const ValueProp = () => {
               <div className="bg-[#D2B48C] p-6 rounded-lg shadow-lg w-full text-center relative z-10">
               <h3 className="text-2xl font-semibold text-black mb-4 font-playfair">Setup Within Hours</h3>
               <p className="text-black text-xl font-sourcesans">
-                Our remote supervisors ensure a seamless setup within hours. They will work closely with your team to smoothly integrate the autonomy system, ensuring it adapts to your warehouse environment with zero downtime. You&apos;ll be up and running quickly, with everything optimized for maximum efficiency from the start.
+                Our team can deploy in your warehouse within hours, handling mapping, training, and testing. After setup, our remote supervisors provide 24/7 support and intervention. Our system is designed for rapid installation and seamless operations, ensuring uninterrupted performance.
               </p>
             </div>
               <div className="flex justify-center items-center mb-6">

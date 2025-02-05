@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Playfair_Display, Source_Sans_3 } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-playfair",
-});
-
-const sourceSans = Source_Sans_3({
+const sourceSans = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-source-sans",
@@ -21,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${sourceSans.variable}`}>
+    <html lang="en" className={`${sourceSans.variable}`}>
      <head>
           <link rel="icon" href="/favicon.ico" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

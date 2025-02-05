@@ -7,10 +7,10 @@ const AboutUs = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 bg-amber-50 min-h-[calc(100vh-60px)] pt-[60px]">
       {/* Left column with text */}
       <div className="flex flex-col justify-center space-y-8 px-8 text-center lg:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold text-black font-playfair">
+        <h1 className="text-4xl md:text-5xl font-bold text-black">
           About Us
         </h1>
-        <p className="text-black text-lg font-sourcesans leading-relaxed max-w-lg mx-auto lg:mx-0">
+        <p className="text-black text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
          We live and breathe forklifts. Our team has background in industrial equipment, robot deployments, and material handling software. We started with humble begining and have been dedicated to working closely with each customer to bring them highest ROI possible.
         </p>
          <div className="py-6">
