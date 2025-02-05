@@ -6,6 +6,14 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Explicitly type section names
+  const sectionNames: Record<"landing" | "valueprop" | "faq" | "aboutus", string> = {
+    landing: "Home",
+    valueprop: "Why Choose Us",
+    faq: "FAQ",
+    aboutus: "About Us",
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -47,7 +55,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 font-playfair">
-          {["Main", "Value Prop", "faq", "aboutus"].map((id) => (
+          {(Object.keys(sectionNames) as Array<keyof typeof sectionNames>).map((id) => (
             <a
               key={id}
               href={`#${id}`}
@@ -55,7 +63,7 @@ const Navbar = () => {
                 activeSection === id ? "text-slate-600" : "text-black"
               }`}
             >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
+              {sectionNames[id]}
             </a>
           ))}
         </div>
@@ -72,14 +80,14 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="absolute left-0 top-full w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden">
-          {["landing", "whychoose", "faq", "aboutus"].map((id) => (
+          {(Object.keys(sectionNames) as Array<keyof typeof sectionNames>).map((id) => (
             <a
               key={id}
               href={`#${id}`}
               className="text-lg font-semibold text-black"
               onClick={() => setIsMenuOpen(false)} // Close menu on selection
             >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
+              {sectionNames[id]}
             </a>
           ))}
         </div>

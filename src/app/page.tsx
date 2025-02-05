@@ -15,7 +15,7 @@ export default function Home() {
         <Landing />
       </section>
 
-      <section id="whychoose">
+      <section id="valueprop">
         <ValueProp />
       </section>
 
