@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 font-playfair">
-          {["landing", "whychoose", "faq", "aboutus"].map((id) => (
+          {["Main", "Value Prop", "faq", "aboutus"].map((id) => (
             <a
               key={id}
               href={`#${id}`}
