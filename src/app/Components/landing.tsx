@@ -15,7 +15,7 @@ const Landing = () => {
 
         </div>
         <p className="text-black text-lg md:text-xl leading-relaxed max-w-lg mx-auto md:mx-0">
-          We bring concierge forklift autonomy that does not require CapEx investment or complicated installation. 
+          We bring hands-on forklift autonomy that does not require CapEx investment or complicated installation. 
           You only pay hourly when you need pallets moved. Focus on your core business while we ensure reliable forklift operations in your warehouse.
         </p>
         </div>
