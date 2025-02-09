@@ -9,7 +9,7 @@ const Landing = () => {
       <div className="flex flex-col justify-center space-y-6 px-4 md:px-8 text-center md:text-left w-full md:w-1/2">
       <div className='py-3'>
         <div className='py-3'>
-        <h1 className="text-7xl md:text-7xl font-bold text-black md:py-5 sm:py-3 leading-[1.3]">
+        <h1 className="text-7xl sm:text-6xlmd:text-7xl font-bold text-black md:py-5 sm:py-3 leading-[1.3]">
            Autonomy With ROI From Day 1
         </h1>
 
