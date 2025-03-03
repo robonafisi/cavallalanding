@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "http://cavalla.io/",
+      "destination": "https://cavalla.io/",
+      "permanent": true
+    },
+    {
+      "source": "http://www.cavalla.io/",
+      "destination": "https://cavalla.io/",
+      "permanent": true
+    },
+    {
+      "source": "https://www.cavalla.io/",
+      "destination": "https://cavalla.io/",
+      "permanent": true
+    }
+  ]
+}
