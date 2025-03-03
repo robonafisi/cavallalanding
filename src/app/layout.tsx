@@ -11,15 +11,19 @@ const sourceSans = IBM_Plex_Sans({
 export const metadata: Metadata = {
   title: "Cavalla - Autonomy With ROI From Day One",
   description: "Efficient and reliable autonomous forklift operations.",
+  alternates: {
+    canonical: "https://cavalla.io/", // 👈 This ensures Google sees the right URL
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${sourceSans.variable}`}>
-     <head>
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-          <link rel="apple-touch-icon" href="/favicon.png" />
+      <head>
+        <link rel="canonical" href="https://cavalla.io/" /> {/* 👈 This explicitly sets the canonical URL */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
       <body className="antialiased" style={{ backgroundColor: "#D8C3A5" }}>
         {children}
