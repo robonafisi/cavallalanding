@@ -11,7 +11,7 @@ const AboutUs = () => {
           About Us
         </h1>
         <p className="text-black text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-         We live and breathe forklifts. Our team has background in industrial equipment, robot deployments, and material handling software. We started with humble begining and have been dedicated to working closely with each customer to bring them highest ROI possible.
+         We live and breathe forklifts. Our team has background in industrial equipment, robot deployments, and material handling software. We started with humble beginnings and have been dedicated to working closely with each customer to bring them highest ROI possible.
         </p>
          <div className="py-6">
         <a href="https://calendly.com/cavalla/meeting" target="_blank" rel="noopener noreferrer">
