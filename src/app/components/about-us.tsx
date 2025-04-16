@@ -19,7 +19,7 @@ const AboutUs = () => {
         {/* Right: Team Image */}
         <div className="w-full">
           <Image
-            src="/teampicture1.png"
+            src="/warehouse1.png"
             alt="Cavalla Team"
             width={800}
             height={600}
