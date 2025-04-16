@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -17,16 +18,18 @@ const AboutUs = () => {
 
         {/* Right: Team Image */}
         <div className="w-full">
-          <img
-            src="/teampicture1.png" // Replace with your actual team image path
+          <Image
+            src="/teampicture1.png"
             alt="Cavalla Team"
+            width={800}
+            height={600}
             className="w-full h-auto rounded-xl shadow-lg object-cover"
           />
         </div>
       </div>
     </section>
   );
-};
 
+};
 export default AboutUs;
 
