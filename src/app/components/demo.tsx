@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 const Demo = () => {
   return (
@@ -16,15 +17,17 @@ const Demo = () => {
 
       {/* Full-width image at the bottom */}
       <div className="w-full">
-        <img
+        <Image
           src="/warehouse1.png"
           alt="Warehouse background"
           className="w-full h-auto object-cover"
+          width={1920}
+          height={1080}
+          priority
         />
       </div>
     </div>
   );
 };
-
 export default Demo;
 

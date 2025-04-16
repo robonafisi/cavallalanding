@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const sections = ["demo", "video", "deployment", "aboutus"];
 
@@ -66,9 +67,11 @@ const Navbar = () => {
 
         {/* Center: Logo */}
         <div className="absolute left-1/2 -translate-x-1/2">
-          <img
+          <Image
             src="/logo.png"
             alt="Cavalla Logo"
+            width={48}
+            height={48}
             className="h-12 w-auto object-contain"
           />
         </div>
@@ -120,6 +123,6 @@ const Navbar = () => {
       )}
     </nav>
   );
-};
 
+};
 export default Navbar;
