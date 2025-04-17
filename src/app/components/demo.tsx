@@ -9,7 +9,7 @@ const Demo = () => {
           <h2 className="text-balance text-6xl sm:text-7xl font-semibold tracking-wide leading-tight">
             Autonomy with ROI From Day 1
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-gray-300">
+          <p className="mx-auto mt-6 max-w-xl text-pretty text-xl text-gray-50">
             Cavalla has built the most reliable, high throughput, and easy to install forklift autonomy system on the market.
           </p>
         </div>
