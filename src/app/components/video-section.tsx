@@ -17,7 +17,7 @@ const VideoSection = () => {
           />
         </div>
         <p className="text-gray-50 text-xl max-w-3xl mx-auto mb-6">
-          Whether you operate one warehouse or dozens, Cavalla adapts to your needs. Our systems are monitored 24/7 by logistics and autonomy experts, ensuring peak performance from day one — and every day after. We&apos;re not just a vendor, we&apos;re your forklift operations partner.
+          Cavalla delivers warehouse autonomy with a human in the loop. Our system blends AI-driven automation with remote oversight to ensure reliable, high-throughput operations from day one. Fast to deploy, easy to scale, and built for the realities of the warehouse floor.
         </p>
         <a
           href="https://calendly.com/cavalla/meeting"
