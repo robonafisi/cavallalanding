@@ -30,7 +30,7 @@ const DeploymentProcess = () => {
   return (
     <section id="deployment" className="bg-black py-20 px-4 text-center text-white">
       <h2 className="text-4xl font-semibold mb-12">Deployment Process</h2>
-      <div className="flex max-w-7xl mx-auto gap-4 transition-all duration-500">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
         {steps.map((step, index) => {
           const isHovered = hovered === index;
           const isOtherHovered = hovered !== null && hovered !== index;
@@ -38,29 +38,24 @@ const DeploymentProcess = () => {
           return (
             <div
               key={index}
-              className={`relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer h-[450px] transition-all duration-500 ${
-                isHovered
-                  ? "flex-[1.4]"
-                  : isOtherHovered
-                  ? "flex-[0.9]"
-                  : "flex-1"
-              }`}
+              className={`relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer transition-all duration-500 aspect-[4/5]
+                ${isHovered ? "md:scale-[1.03]" : ""}
+                ${isOtherHovered ? "md:opacity-70" : "md:opacity-100"}`}
               onMouseEnter={() => setHovered(index)}
               onMouseLeave={() => setHovered(null)}
             >
               <Image
                 src={step.image}
                 alt={step.title}
-                layout="fill"
-                objectFit="cover"
-                className={`transition duration-500 ${
+                fill
+                className={`object-cover transition duration-500 ${
                   isHovered ? "opacity-30 scale-105" : "opacity-100"
                 }`}
               />
               <div
-                className={`absolute inset-0 flex flex-col items-center justify-center text-white transition duration-500 p-6 ${
-                  isHovered ? "opacity-100" : "opacity-0"
-                }`}
+                className={`absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 transition duration-500 ${
+                  isHovered ? "opacity-100 bg-black/70" : "opacity-0"
+                } md:opacity-0 md:group-hover:opacity-100`}
               >
                 <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-md max-w-xs">{step.description}</p>
