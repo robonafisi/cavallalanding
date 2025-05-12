@@ -61,7 +61,7 @@ const ForkliftStatus = () => (
       className="mb-2 object-contain"
     />
     <span className="text-white text-sm">
-      Status: <span className="text-emerald-400">Idle</span>
+      Status: <span className="text-emerald-400">Unloading Dock 1</span>
     </span>
   </div>
 );
@@ -74,8 +74,8 @@ const ControlPanel = () => (
     <div>
       <h3 className="text-base font-semibold mb-2">Priority List</h3>
       <ul className="list-disc list-inside space-y-1 text-sm">
-        <li>🟢 Active Job: Dock Door 2 - Unload Trailer #58</li>
-        <li>🟡 Staging Prep: Lane 3 - Ready for Pickup</li>
+        <li>🟢 Active Job: Unload Dock 1</li>
+        <li>🟡 Staging Prep: Lane 3</li>
       </ul>
     </div>
   </div>
