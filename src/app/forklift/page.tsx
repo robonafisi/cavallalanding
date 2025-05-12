@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 
+// ✅ Squares (Dock, Lane, Entry, etc.)
 const Item = ({
   label,
   type,
@@ -9,36 +10,48 @@ const Item = ({
   label: string;
   type: "dock" | "lane" | "entry" | "charging" | "forklift";
 }) => {
-  const base = "relative rounded group cursor-pointer transition-all duration-300";
-  let style = "";
+  let width = "";
+  let height = "";
+  let bgColor = "";
 
   switch (type) {
     case "dock":
-      style = "w-24 h-12 bg-gray-600 hover:bg-blue-500";
+      width = "w-24";
+      height = "h-12";
+      bgColor = "bg-blue-500";
       break;
     case "lane":
-      style = "w-12 h-36 bg-gray-700 hover:bg-green-500";
+      width = "w-12";
+      height = "h-36";
+      bgColor = "bg-green-500";
       break;
     case "entry":
-      style = "w-48 h-12 bg-gray-700 hover:bg-yellow-500";
+      width = "w-48";
+      height = "h-12";
+      bgColor = "bg-yellow-500";
       break;
     case "charging":
-      style = "w-16 h-36 bg-gray-700 hover:bg-yellow-500";
+      width = "w-16";
+      height = "h-36";
+      bgColor = "bg-yellow-600";
       break;
     case "forklift":
-      style = "w-24 h-20 bg-gray-500 hover:bg-purple-500";
+      width = "w-24";
+      height = "h-20";
+      bgColor = "bg-purple-500";
       break;
   }
 
   return (
-    <div className={`${base} ${style}`}>
-      <span className="absolute inset-0 flex items-center justify-center text-white text-sm text-center px-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {label}
-      </span>
+    <div
+      className={`rounded ${width} ${height} ${bgColor} flex items-center justify-center text-white text-sm font-medium text-center px-1`}
+    >
+      {label}
     </div>
   );
 };
 
+// ✅ Dock Button Panel
 const DockControl = ({ dock }: { dock: string }) => (
   <div className="flex flex-col items-center bg-gray-800 rounded p-3 w-36">
     <span className="text-white font-medium mb-2 text-sm">{dock}</span>
@@ -51,6 +64,7 @@ const DockControl = ({ dock }: { dock: string }) => (
   </div>
 );
 
+// ✅ Forklift Status Panel (Right Side)
 const ForkliftStatus = () => (
   <div className="flex flex-col items-center bg-gray-800 rounded p-4 w-44">
     <Image
@@ -66,6 +80,7 @@ const ForkliftStatus = () => (
   </div>
 );
 
+// ✅ Support + Priority List Panel (Bottom Right)
 const ControlPanel = () => (
   <div className="flex flex-col bg-gray-800 text-white p-4 rounded w-60">
     <button className="mb-4 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded text-sm">
@@ -81,6 +96,7 @@ const ControlPanel = () => (
   </div>
 );
 
+// ✅ Main Page
 const Forklift = () => {
   return (
     <div className="bg-black min-h-screen text-white">
@@ -95,11 +111,11 @@ const Forklift = () => {
         />
       </nav>
 
-      {/* Main Layout */}
+      {/* Layout */}
       <div className="pt-16 px-4 flex flex-col items-center gap-6 overflow-x-hidden">
-        {/* Top Layout */}
+        {/* Top Section */}
         <div className="flex gap-6 justify-center flex-wrap">
-          {/* Left Column */}
+          {/* Left Side */}
           <div className="flex flex-col gap-4">
             <Item label="Entry Door" type="entry" />
             <Item label="Charging Station" type="charging" />
@@ -126,14 +142,14 @@ const Forklift = () => {
             </div>
           </div>
 
-          {/* Right Sidebar */}
+          {/* Right Forklift Status */}
           <ForkliftStatus />
         </div>
 
         {/* Divider */}
         <div className="border-t border-white w-full my-6"></div>
 
-        {/* Bottom Section */}
+        {/* Bottom Section: Dock Controls + Support */}
         <div className="w-full px-4 pb-6 flex justify-center gap-10 flex-wrap">
           <div className="flex gap-4 flex-wrap justify-center">
             <DockControl dock="Dock Door 1" />
