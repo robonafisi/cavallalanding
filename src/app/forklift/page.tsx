@@ -17,16 +17,16 @@ const Item = ({
       style = "w-24 h-12 bg-gray-600 hover:bg-blue-500";
       break;
     case "lane":
-      style = "w-12 h-36 bg-gray-700 hover:bg-green-500"; // shorter
+      style = "w-12 h-36 bg-gray-700 hover:bg-green-500";
       break;
     case "entry":
-      style = "w-48 h-12 bg-gray-700 hover:bg-yellow-500"; // shorter
+      style = "w-48 h-12 bg-gray-700 hover:bg-yellow-500";
       break;
     case "charging":
-      style = "w-16 h-36 bg-gray-700 hover:bg-yellow-500"; // shorter
+      style = "w-16 h-36 bg-gray-700 hover:bg-yellow-500";
       break;
     case "forklift":
-      style = "w-24 h-20 bg-gray-500 hover:bg-purple-500"; // shorter
+      style = "w-24 h-20 bg-gray-500 hover:bg-purple-500";
       break;
   }
 
@@ -83,7 +83,7 @@ const ControlPanel = () => (
 
 const Forklift = () => {
   return (
-    <div className="bg-black min-h-screen text-white overflow-x-auto">
+    <div className="bg-black min-h-screen text-white">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black shadow-md h-16 flex items-center justify-center border-b border-white">
         <Image
@@ -95,56 +95,54 @@ const Forklift = () => {
         />
       </nav>
 
-      {/* Layout */}
-      <div className="pt-16 px-4 flex justify-center gap-6 flex-wrap">
-        {/* Left Column */}
-        <div className="flex flex-col gap-4">
-          <Item label="Entry Door" type="entry" />
-          <Item label="Charging Station" type="charging" />
-        </div>
-
-        {/* Main Area */}
-        <div className="flex flex-col gap-4">
-          {/* Top row: Docks and Staging */}
-          <div className="flex gap-4 flex-wrap">
-            <Item label="Staging Lane 1" type="lane" />
-            <Item label="Dock Door 1" type="dock" />
-            <Item label="Staging Lane 2" type="lane" />
-            <Item label="Dock Door 2" type="dock" />
-            <Item label="Staging Lane 3" type="lane" />
-            <Item label="Dock Door 3" type="dock" />
-            <Item label="Staging Lane 4" type="lane" />
-            <Item label="Dock Door 4" type="dock" />
+      {/* Main Layout */}
+      <div className="pt-16 px-4 flex flex-col items-center gap-6 overflow-x-hidden">
+        {/* Top Layout */}
+        <div className="flex gap-6 justify-center flex-wrap">
+          {/* Left Column */}
+          <div className="flex flex-col gap-4">
+            <Item label="Entry Door" type="entry" />
+            <Item label="Charging Station" type="charging" />
           </div>
 
-          {/* Forklift Parking Row */}
-          <div className="flex gap-4 flex-wrap">
-            <Item label="Forklift Parking A" type="forklift" />
-            <Item label="Forklift Parking B" type="forklift" />
-            <Item label="Forklift Parking C" type="forklift" />
-            <Item label="Forklift Parking D" type="forklift" />
+          {/* Grid Area */}
+          <div className="flex flex-col gap-4 overflow-x-auto">
+            <div className="flex gap-4 flex-nowrap">
+              <Item label="Staging Lane 1" type="lane" />
+              <Item label="Dock Door 1" type="dock" />
+              <Item label="Staging Lane 2" type="lane" />
+              <Item label="Dock Door 2" type="dock" />
+              <Item label="Staging Lane 3" type="lane" />
+              <Item label="Dock Door 3" type="dock" />
+              <Item label="Staging Lane 4" type="lane" />
+              <Item label="Dock Door 4" type="dock" />
+            </div>
+
+            <div className="flex gap-4 flex-nowrap">
+              <Item label="Forklift Parking A" type="forklift" />
+              <Item label="Forklift Parking B" type="forklift" />
+              <Item label="Forklift Parking C" type="forklift" />
+              <Item label="Forklift Parking D" type="forklift" />
+            </div>
           </div>
+
+          {/* Right Sidebar */}
+          <ForkliftStatus />
         </div>
 
-        {/* Right Sidebar: Forklift Status */}
-        <ForkliftStatus />
-      </div>
+        {/* Divider */}
+        <div className="border-t border-white w-full my-6"></div>
 
-      {/* Divider */}
-      <div className="border-t border-white my-6 w-full"></div>
-
-      {/* Bottom Control Section */}
-      <div className="px-4 pb-6 flex justify-center gap-10 flex-wrap">
-        {/* Dock Controls */}
-        <div className="flex gap-4 flex-wrap justify-center">
-          <DockControl dock="Dock Door 1" />
-          <DockControl dock="Dock Door 2" />
-          <DockControl dock="Dock Door 3" />
-          <DockControl dock="Dock Door 4" />
+        {/* Bottom Section */}
+        <div className="w-full px-4 pb-6 flex justify-center gap-10 flex-wrap">
+          <div className="flex gap-4 flex-wrap justify-center">
+            <DockControl dock="Dock Door 1" />
+            <DockControl dock="Dock Door 2" />
+            <DockControl dock="Dock Door 3" />
+            <DockControl dock="Dock Door 4" />
+          </div>
+          <ControlPanel />
         </div>
-
-        {/* Right Panel */}
-        <ControlPanel />
       </div>
     </div>
   );
