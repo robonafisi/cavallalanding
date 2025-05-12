@@ -54,7 +54,7 @@ const DockControl = ({ dock }: { dock: string }) => (
 const ForkliftStatus = () => (
   <div className="flex flex-col items-center bg-gray-800 rounded p-4 w-44">
     <Image
-      src="/forklift.png"
+      src="/forkliftsm.png"
       alt="Forklift"
       width={60}
       height={60}
