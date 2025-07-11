@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 const Demo = () => {
   return (
@@ -16,16 +15,16 @@ const Demo = () => {
       </div>
 
       {/* Full-width image at the bottom */}
-      <div className="w-full">
-        <Image
-          src="/warehouse1.png"
-          alt="Warehouse background"
-          className="w-full h-auto object-cover"
-          width={1920}
-          height={1080}
-          priority
-        />
-      </div>
+      <div className="overflow-hidden rounded-3xl shadow-lg mb-8">
+          <video
+            className="w-full h-auto"
+            src="/WarehouseDemo.mov"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        </div>
     </div>
   );
 };
